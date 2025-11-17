@@ -19,7 +19,7 @@ export class Login {
 
   onLogin(){
     var data = this.loginForm.value;
-    this.http.post("https://api-blogging-site-ashraful.runasp.net/api/Blogging/userLogin",data,{responseType: 'text'}).subscribe({
+    this.http.post("https://localhost:7223/api/Blogging/userLogin",data,{responseType: 'text'}).subscribe({
       next:(res : any)=>{
         console.log(res)
         if(res=="Login Successfull"){
