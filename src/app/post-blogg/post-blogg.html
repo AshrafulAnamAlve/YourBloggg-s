@@ -1,0 +1,52 @@
+<div class="blog-form-container">
+  <h1 class="form-title">Post a New Blog</h1>
+
+  <form [formGroup]="bloggForm">
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Your Name <span class="required">*</span></label>
+      <input type="text" id="name" formControlName="name" placeholder="Enter your name" class="form-input"
+        [class.error]="bloggForm.get('name')?.invalid && bloggForm.get('name')?.touched">
+      
+      @if (bloggForm.get('name')?.touched && bloggForm.get('name')?.invalid) {
+        <div class="error-msg">
+          @if (bloggForm.get('name')?.errors?.['required']) { <span>Name is required</span> }
+          @if (bloggForm.get('name')?.errors?.['maxlength']) { <span>Max 50 characters</span> }
+        </div>
+      }
+    </div>
+
+    <!-- Title -->
+    <div class="form-group">
+      <label for="title">Blog Title <span class="required">*</span></label>
+      <input type="text" id="title" formControlName="titel" placeholder="Enter blog title" class="form-input"
+        [class.error]="bloggForm.get('title')?.invalid && bloggForm.get('title')?.touched">
+      
+      @if (bloggForm.get('title')?.touched && bloggForm.get('title')?.invalid) {
+        <div class="error-msg">
+          @if (bloggForm.get('title')?.errors?.['required']) { <span>Title is required</span> }
+          @if (bloggForm.get('title')?.errors?.['maxlength']) { <span>Max 50 characters</span> }
+        </div>
+      }
+    </div>
+
+    <!-- Description -->
+    <div class="form-group">
+      <label for="description">Blog Description <span class="required">*</span></label>
+      <textarea id="description" formControlName="description" rows="6" placeholder="Write your blog here..."
+        class="form-textarea"
+        [class.error]="bloggForm.get('description')?.invalid && bloggForm.get('description')?.touched"></textarea>
+      
+      @if (bloggForm.get('description')?.touched && bloggForm.get('description')?.invalid) {
+        <div class="error-msg">
+          @if (bloggForm.get('description')?.errors?.['required']) { <span>Description is required</span> }
+        </div>
+      }
+    </div>
+
+    <button type="button" class="submit-btn" (click)="onSubmit()" [disabled]="bloggForm.invalid">
+      Post Blog
+    </button>
+  </form>
+</div>
