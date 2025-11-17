@@ -19,7 +19,7 @@ export class Home implements OnInit{
   http= inject(HttpClient)
   
   getBlogg(){
-    this.http.get("https://localhost:7223/api/Blogging/getBlogg").subscribe({
+    this.http.get("https://api-blogging-site-ashraful.runasp.net/api/Blogging/getBlogg").subscribe({
       next:(res: any)=>{
         this.blogg=res;
       },
