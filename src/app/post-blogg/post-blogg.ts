@@ -14,7 +14,7 @@ export class PostBlogg {
   http = inject(HttpClient)
   bloggForm: FormGroup = new FormGroup({
     name : new FormControl(""),
-    titel: new FormControl(""),
+    title: new FormControl(""),
     description: new FormControl("")
   })
 

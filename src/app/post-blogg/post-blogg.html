@@ -20,13 +20,13 @@
     <!-- Title -->
     <div class="form-group">
       <label for="title">Blog Title <span class="required">*</span></label>
-      <input type="text" id="title" formControlName="titel" placeholder="Enter blog title" class="form-input"
+      <input type="text" id="title" formControlName="title" placeholder="Enter blog title" class="form-input"
         [class.error]="bloggForm.get('title')?.invalid && bloggForm.get('title')?.touched">
       
       @if (bloggForm.get('title')?.touched && bloggForm.get('title')?.invalid) {
         <div class="error-msg">
           @if (bloggForm.get('title')?.errors?.['required']) { <span>Title is required</span> }
-          @if (bloggForm.get('title')?.errors?.['maxlength']) { <span>Max 50 characters</span> }
+         
         </div>
       }
     </div>
