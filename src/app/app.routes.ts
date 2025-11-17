@@ -4,11 +4,13 @@ import { Login } from './login/login';
 import { Register } from './register/register';
 import { PostBlogg } from './post-blogg/post-blogg';
 import { authGuard } from './auth-guard';
+import { ContactUs } from './contact-us/contact-us';
 
 export const routes: Routes = [
     {path:'', redirectTo:'/home',pathMatch:'full'},
     {path:'home',component:Home},
     {path: 'login', component: Login},
     {path:'register', component: Register},
-    {path: 'post-blogg', component:PostBlogg, canActivate:[authGuard]}
+    {path: 'post-blogg', component:PostBlogg, canActivate:[authGuard]},
+    {path:'Contact',component:ContactUs}
 ];

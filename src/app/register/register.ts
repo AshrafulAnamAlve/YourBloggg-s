@@ -20,7 +20,7 @@ export class Register {
 
  onSubmit(){
     var data = this.userForm.value;
-    this.http.post("http://api-blogging-site-ashraful.runasp.net/api/Blogging/userPost",data,{responseType:"text"}).subscribe({
+    this.http.post("https://api-blogging-site-ashraful.runasp.net/api/Blogging/userPost",data,{responseType:"text"}).subscribe({
       next:(res: any)=>{
         alert(res)
         this.userForm.reset();

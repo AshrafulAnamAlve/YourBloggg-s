@@ -24,6 +24,7 @@
     <ul class="sidebar-nav">
       <li><a routerLink="/home">Blogg's</a></li>
       <li><a routerLink="/post-blogg">Post Bloog</a></li>
+      <li><a routerLink="/Contact">Contact Us</a></li>
       <li [hidden]="isLoggin"><a routerLink="/login">Login</a></li>
       <li [hidden]="isLoggin"><a routerLink="/register">SignUp</a></li>
       <li class="logout" [hidden]="!isLoggin"><a (click)="logout()">Logout</a></li> 

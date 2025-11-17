@@ -23,7 +23,7 @@ export class PostBlogg {
     debugger
     const data = this.bloggForm.value
 
-    this.http.post("http://api-blogging-site-ashraful.runasp.net/api/Blogging/postBlogg",data,{responseType:"text"}).subscribe({
+    this.http.post("https://api-blogging-site-ashraful.runasp.net/api/Blogging/postBlogg",data,{responseType:"text"}).subscribe({
       next: (res: any)=>{
         debugger
         alert(res);

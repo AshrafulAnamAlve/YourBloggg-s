@@ -1,0 +1,63 @@
+<div class="contact-container">
+  <!-- Header Section -->
+  <div class="contact-header">
+    <h1>Contact Us</h1>
+    <p>Contact us for any questions, suggestions or help.</p>
+  </div>
+
+  <div class="contact-content">
+   
+    <div class="contact-info">
+      <div class="info-card">
+        <div class="icon">✉️</div>
+        <h3>Email Us</h3>
+        <p>asrafulanamalve45@gmail.com</p>
+      </div>
+      
+       <div class="info-card">
+        <div class="icon">💬</div>
+        <h3>Social</h3>
+        <div class="social-links">
+          <a href="https://www.facebook.com/de.asvab" target="_blank">Facebook</a>
+          <a href="https://github.com/AshrafulAnamAlve" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/asraful-anam-alve/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <div class="icon">🌍</div>
+        <h3>Location</h3>
+        <p>Dhaka, Bangladesh</p>
+      </div>
+
+     
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="name" name="name" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="subject" name="subject" placeholder="Subject" required />
+        </div>
+        <div class="form-group">
+          <textarea [(ngModel)]="message" name="message" rows="6" placeholder="Your Message..." required></textarea>
+        </div>
+        <button type="button" (click)="onSubmit()" class="submit-btn">
+          Send Message
+        </button>
+      </form>
+
+      <!-- Success Message -->
+      <div class="success-message" *ngIf="submitted">
+        <h3>Thank You!</h3>
+        <p>We have received your message. We will reply soon.</p>
+      </div>
+    </div>
+  </div>
+</div>
