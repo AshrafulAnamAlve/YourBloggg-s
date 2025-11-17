@@ -27,6 +27,7 @@ export class PostBlogg {
       next: (res: any)=>{
         debugger
         alert(res);
+        this.bloggForm.reset();
       },
       error:(err)=>{
         debugger
