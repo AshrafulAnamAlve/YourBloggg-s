@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-contact-us',
-  imports: [FormsModule],
+  imports: [FormsModule,CommonModule],
   templateUrl: './contact-us.html',
   styleUrl: './contact-us.css',
 })
